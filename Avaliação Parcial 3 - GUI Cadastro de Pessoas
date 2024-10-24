@@ -1,0 +1,105 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+public class SistemaPessoa extends JFrame {
+
+    public SistemaPessoa() {
+        setTitle("Sistema Pessoa - Janela Principal");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        
+        setLayout(new BorderLayout());
+
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menuArquivo = new JMenu("Arquivo");
+        JMenuItem menuSair = new JMenuItem("Sair");
+
+        menuArquivo.add(menuSair);
+        menuBar.add(menuArquivo);
+
+        setJMenuBar(menuBar);
+
+        JLabel rodapeLabel = new JLabel("Sistema Pessoa - Desenvolvido por Denys", SwingConstants.CENTER);
+        add(rodapeLabel, BorderLayout.SOUTH);
+
+        JPanel painelPrincipal = new JPanel(new GridLayout(2, 1));
+        JButton cadastroButton = new JButton("Cadastro de Pessoas");
+        JButton sairButton = new JButton("Sair");
+
+        painelPrincipal.add(cadastroButton);
+        painelPrincipal.add(sairButton);
+
+        add(painelPrincipal, BorderLayout.CENTER);
+
+        cadastroButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirCadastroPessoas();
+            }
+        });
+
+        ActionListener sairAcao = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0); // Fecha o programa
+            }
+        };
+
+        menuSair.addActionListener(sairAcao);
+        sairButton.addActionListener(sairAcao);
+    }
+
+    private void abrirCadastroPessoas() {
+        JFrame cadastroFrame = new JFrame("Cadastro de Pessoas");
+        cadastroFrame.setSize(400, 300);
+        cadastroFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        cadastroFrame.setLocationRelativeTo(null);
+        cadastroFrame.setLayout(new GridLayout(4, 2));
+
+        JLabel nomeLabel = new JLabel("Nome:");
+        JTextField nomeField = new JTextField();
+
+        JLabel emailLabel = new JLabel("Email:");
+        JTextField emailField = new JTextField();
+
+        JButton salvarButton = new JButton("Salvar");
+        JButton sairButton = new JButton("Sair");
+
+        cadastroFrame.add(nomeLabel);
+        cadastroFrame.add(nomeField);
+        cadastroFrame.add(emailLabel);
+        cadastroFrame.add(emailField);
+        cadastroFrame.add(salvarButton);
+        cadastroFrame.add(sairButton);
+
+        salvarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Botão clicado! - Salvar");
+            }
+        });
+
+        sairButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Botão clicado! - Sair");
+                cadastroFrame.dispose();
+            }
+        });
+
+        cadastroFrame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new SistemaPessoa().setVisible(true);
+            }
+        });
+    }
+}
