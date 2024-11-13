@@ -1,8 +1,3 @@
-/*
-    Classe para configurações globais do sistema
-    Declara variáveis static final (constantes)
-    Variáveis e Ojetos ficam acessíveis em qualquer lugar do programa sem precisar instanciar a classe.
-*/
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
