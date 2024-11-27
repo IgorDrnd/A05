@@ -5,15 +5,16 @@ public class CadastroUsuario {
 
     // Construtor principal - Criação do formulário completo com todos os campos
     public CadastroUsuario(JFrame principal) {
-        this(principal, true);  // Chama a versão com parâmetros opcionais
+        this(principal, true); // Chama a versão com parâmetros opcionais
     }
 
     // Método sobrecarregado - Criação do formulário com campos personalizados
     public CadastroUsuario(JFrame principal, boolean camposCompletos) {
-        this(principal, camposCompletos, "Cadastro de Usuários");  // Chama outra versão que também aceita o título
+        this(principal, camposCompletos, "Cadastro de Usuários"); // Chama outra versão que também aceita o título
     }
 
-    // Método sobrecarregado - Criação do formulário com campos personalizados e título personalizado
+    // Método sobrecarregado - Criação do formulário com campos personalizados e
+    // título personalizado
     public CadastroUsuario(JFrame principal, boolean camposCompletos, String tituloFormulario) {
         JDialog cadastroUsuarios = new JDialog(principal, tituloFormulario, true);
         cadastroUsuarios.setSize(600, 300);

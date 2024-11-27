@@ -24,6 +24,6 @@ public class BotoesCrud {
         return painelBotoes;
     }
 
-    // Método de ação para botões "Incluir", "Alterar", "Excluir", "Consultar"
-    public static void acaoBotao(JDialog dialog, String acao) {
+// Método de ação para botões "Incluir", "Alterar", "Excluir", "Consultar"
+public static void acaoBotao(JDialog dialog, String acao) {
         JOptionPane.showMessage

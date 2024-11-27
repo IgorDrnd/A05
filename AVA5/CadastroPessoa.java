@@ -5,7 +5,7 @@ public class CadastroPessoa {
 
     // Construtor principal - Criação do formulário completo com todos os campos
     public CadastroPessoa(JFrame principal) {
-        this(principal, true);  // Chama a versão com parâmetros opcionais
+        this(principal, true); // Chama a versão com parâmetros opcionais
     }
 
     // Método sobrecarregado - Criação do formulário com campos personalizados
@@ -49,8 +49,8 @@ public class CadastroPessoa {
         cadastroPessoas.setVisible(true);
     }
 
-    // Método sobrecarregado - Criação do formulário com apenas campos essenciais
-    public CadastroPessoa(JFrame principal, boolean camposCompletos, String tituloFormulario) {
+// Método sobrecarregado - Criação do formulário com apenas campos essenciais
+public CadastroPessoa(JFrame principal, boolean camposCompletos, String tituloFormulario) {
         JDialog cadastroPessoas = new JDialog(principal, tituloFormulario, true);
         cadastroPessoas.setSize(600, 300);
         cadastroPessoas.setLayout(new BorderLayout());

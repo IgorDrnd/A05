@@ -42,8 +42,14 @@ public class MenuPrincipal {
             public void menuSelected(javax.swing.event.MenuEvent e) {
                 System.exit(0); // Sai do sistema
             }
-            @Override public void menuDeselected(javax.swing.event.MenuEvent e) {}
-            @Override public void menuCanceled(javax.swing.event.MenuEvent e) {}
+
+            @Override
+            public void menuDeselected(javax.swing.event.MenuEvent e) {
+            }
+
+            @Override
+            public void menuCanceled(javax.swing.event.MenuEvent e) {
+            }
         });
 
         menuPrincipal.add(menuCadastro);

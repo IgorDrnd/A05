@@ -21,7 +21,8 @@ public class SistemaPessoa {
         this(tituloJanela, "denys.silva", "12.1.2024");
     }
 
-    // Construtor sobrecarregado: permite personalizar o título, o usuário e a versão do sistema
+    // Construtor sobrecarregado: permite personalizar o título, o usuário e a
+    // versão do sistema
     public SistemaPessoa(String tituloJanela, String nomeUsuario, String versaoSistema) {
         iniciarSistema(tituloJanela, nomeUsuario, versaoSistema);
     }
@@ -48,8 +49,12 @@ public class SistemaPessoa {
             public void menuSelected(javax.swing.event.MenuEvent e) {
                 System.exit(0);
             }
-            public void menuDeselected(javax.swing.event.MenuEvent e) {}
-            public void menuCanceled(javax.swing.event.MenuEvent e) {}
+
+            public void menuDeselected(javax.swing.event.MenuEvent e) {
+            }
+
+            public void menuCanceled(javax.swing.event.MenuEvent e) {
+            }
         });
 
         // Adiciona menus à barra de menu
@@ -75,8 +80,7 @@ public class SistemaPessoa {
         // Painel e rodapé
         JPanel painelRodape = new JPanel();
         JLabel labelRodape = new JLabel(
-            "Versão: " + versaoSistema + "    Usuário: " + nomeUsuario + "    Data de acesso: " + dataAcesso
-        );
+                "Versão: " + versaoSistema + "    Usuário: " + nomeUsuario + "    Data de acesso: " + dataAcesso);
         painelRodape.add(labelRodape);
 
         // Adiciona componentes ao frame principal
